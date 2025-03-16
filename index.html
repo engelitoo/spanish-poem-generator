@@ -3,28 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Engel's Project</title>
+    <title>AI Spanish Poem Generator</title>
     <!-- Link to the CSS file -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <header>
-      <h1>AI Spanish Poem Generator</h1>
-    </header>
+    <div class="container">
+      <header>
+        <h1>AI Spanish Poem Generator</h1>
+      </header>
 
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the Spanish poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>hhhhhhhh</div>
-    </main>
+      <main>
+        <!-- Form for user input -->
+        <form id="poem-generator-form">
+          <input
+            type="text"
+            placeholder="Enter the topic of the Spanish poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" value="Generate Poem" class="submit-button" />
+        </form>
+
+        <!-- Output container for the poem -->
+        <div id="poem" class="poem"></div>
+      </main>
+    </div>
+
     <footer>
       <p>
         This project was coded by Engel Gärtner and is
@@ -39,7 +46,10 @@
         >.
       </p>
     </footer>
+
+    <!-- Include Axios and TypewriterJs via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!-- Link to the JavaScript file -->
     <script src="index.js"></script>
   </body>
